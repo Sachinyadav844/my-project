@@ -24,7 +24,5 @@ To install and run the project, follow these steps:
 *Contributing*
 Contributions are welcome! If you'd like to contribute to the project, please fork the repository and submit a pull request.
 
-*License*
-This project is licensed under the MIT License.
 
 
