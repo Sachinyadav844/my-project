@@ -8,9 +8,15 @@ from tkinter import messagebox                      #GUI
 
 #To read the data set
 dff=pd.read_csv('netflix_titles.csv')               #We use pandas here. dff gives the dataframe
-dff.columns                                            #we use dff columns here to get access the columns
+
+
+
+#Unused Statement:
+#dff.columns is not needed unless you want to print or use it.
+
 
 #GUI 
+
 top = Tk()  
   
 #THE MAIN WINDOW
@@ -113,7 +119,9 @@ def Sentiment():
             sent='Positive'
         else:
             sent='Negative'
-        dfx.loc[[index,2],'Sentiment']=sent
+        #dfx.loc[[index,2],'Sentiment']=sent
+        #It should be:
+        dfx.loc[index, 'Sentiment'] = sent
 
 
     dfx=dfx.groupby(['Release Year','Sentiment']).size().reset_index(name='Total Content')
